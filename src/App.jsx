@@ -20,14 +20,14 @@ const App = () => {
 
 return (
 <> 
-{/*  Navbar*/}
 
+ {/*  Navbar*/}
  <Navbar  items= { ["Home", "About"]} button={[<Button value='login' className='  text-sm hover:text-md hover:bg-orange-600  opacity-100 text-white'/>]}/>
   
-  {/* about section */}
 
   
-
+  {/* Main section */}
+  {/* I have added the Framer Motion moton-div for the animation */}
   
   <motion.main 
    initial="hidden"
@@ -36,7 +36,7 @@ return (
    variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
    className='  h-auto top-0  w-full overflow-hidden'>
     
-    {/* MainSection for Landing Page' getstarted'*/}
+    
 
     <div className='relative w-full  flex flex-col  justify-between items-start max-xl:px-3 pt-28  mx-auto bg-sky-900  '>
       
@@ -57,9 +57,7 @@ return (
         }} className='text-gray-100 max-sm:text-sm'>Management <span className='text-orange-400'>Software</span></motion.h1>
       </div>
 
-      {/* <div className='relative left-8'>
-      <img src={bgimg1} alt="asset image"  className='opacity-20  w-fit bg-center object-center '  /> 
-      </div> */}
+      
       <div className='flex mx-auto gap-3 max-sm:gap-1 max-sm:text-center'>
       <div className='bg-orange-300 w-2 h-34 mx-auto  mt-5'>
      </div>
@@ -82,7 +80,7 @@ return (
       </div>
 
       </div> 
-      {/* carosal section */}
+      {/* Image section  Dashboard img */}
       <div className=''>
         <div className='container mx-auto mt-5 '>
         <img src={Dashboard1} alt="" className='opacity-90 px1- py-10 shadow-xl' />
@@ -113,11 +111,12 @@ return (
 
   
   {/* Service Section */}
- <section className='  '>
+
+ <section className=''>
    <Carousel />
  </section>
-        
   </motion.main>
+        
 
  
 
