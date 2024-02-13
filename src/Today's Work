@@ -1,4 +1,2 @@
-- i Have added   the   functionality  in the App.js  component 
-- I have work on the carousel.
-- I was facing issues related to the gap between the cards in the carousel , i have resloved it by adding the "slider" class in index.css file  
-- I have commented out the code i have worked on today
+- I have added the Component called home which is our landing page.
+- I have added the cards section and the footer.
