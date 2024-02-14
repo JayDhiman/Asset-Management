@@ -27,11 +27,10 @@ const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 return (
 <> 
 
-{/*  Navbar*/}
-<Navbar  items= { ["Home", "About"]} button={[<Button value='login' className='  text-sm hover:text-md hover:bg-orange-600  opacity-100 text-white'/>]}/>
- 
+{/* Navbar */}
 
- 
+ <Navbar  items= { ["Features", "Contact"]} button={['Login','SignUp']} />
+  
  {/* Main section */}
  {/* I have added the Framer Motion moton-div for the animation */}
  
@@ -131,22 +130,22 @@ return (
 <section className=' overflow-hidden w-full mt-12 pt-12'>
 
  
-<h1 className='font-semibold text-center text-xl p-2 mt-3 mb-7'>
+<h1 className='text-lg pt-4 max-sm:text-center max-sm:text-lg mx-1 text-center xl:text-2xl md:pt-2 xl:my-4 pb-8 '>
   
 Use our Programmable QR Code Tags and track & mantain your assets</h1>
-<div className=' flex max-sm:flex-col gap-6 justify-center p-1'>
+<div className=' flex max-sm:flex-col gap-6 justify-center p-1 flex-wrap'>
 
  {/* wrapper */}
-<div className=' flex max-sm:flex-col items-center   '>
+<div className=' flex max-sm:flex-col items-center'>
 
 {/* items */}
-<div className="w-64 h-64 flex flex-col items-center shadow-lg bg-slate-100 rounded-xl max-sm:w-fit max-sm:h-fit  mb-4  hover:shadow-2xl hover:shadow-black hover:border-spacing-3 hover:-translate-y-2 hover:duration-200 hover:delay-300">
-       <h1 className='text-lg text-center py-4 max-sm:text-center max-sm:text-lg max-sm:px-2'>Ready for mobile Devices</h1>
+<div className=" xl:w-96 xl:h-96 md:w-64 md:h-64 flex flex-col items-center shadow-lg bg-slate-100 rounded-xl max-sm:w-fit max-sm:h-fit  mb-4  hover:shadow-2xl hover:shadow-black hover:border-spacing-3 hover:-translate-y-2 hover:duration-200 hover:delay-300">
+       <h1 className='text-lg pt-4 max-sm:text-center max-sm:text-lg mx-1 text-center xl:text-2xl md:pt-2 xl:my-4'>Ready for mobile Devices</h1>
        <div className='py-3 text-orange-300 '>
-        <CiMobile1 fontSize={60} />
+        <CiMobile1 className="2xl:text-[120px] xl:text-[100px] lg:text-[80px] md:text-[60px] max-md:text-[40px]" />
        </div>
-       <p className='font-thin text-sm text-center'>No extra hardware needed. Most smartphones  </p>
-       <p className='font-extralight text-sm '>  support Company.</p>
+       <p className='font-thin text-sm  text-center pt-3 xl:text-lg'>No extra hardware needed. Most </p>
+       <p className='font-extralight text-sm xl:text-lg'> smartphones support Company.</p>
       
         
 </div>
@@ -157,13 +156,13 @@ Use our Programmable QR Code Tags and track & mantain your assets</h1>
 <div className='flex max-sm:flex-col items-center  '>
 
 {/* items */}
-<div className=" w-64 h-64 flex flex-col items-center shadow-lg bg-slate-100 rounded-xl max-sm:w-fit max-sm:h-fit  mb-4  hover:shadow-2xl hover:shadow-black hover:border-spacing-3 hover:-translate-y-2 hover:duration-300 hover:delay-200">
-       <h1 className='text-lg text-center py-4 max-sm:text-center max-sm:text-lg'>Location tracking</h1>
+<div className=" xl:w-96 xl:h-96 md:w-64 md:h-64 flex flex-col items-center shadow-lg bg-slate-100 rounded-xl max-sm:w-fit max-sm:h-fit  mb-4  hover:shadow-2xl hover:shadow-black hover:border-spacing-3 hover:-translate-y-2 hover:duration-300 hover:delay-200">
+       <h1 className='text-lg pt-4 max-sm:text-center max-sm:text-lg mx-1 text-center xl:text-2xl md:pt-2 xl:my-4'>Location tracking</h1>
        <div className='py-3 text-orange-300 drop-shadow-xl decoration-purple-100'>
-        <CiLocationOn fontSize={60} />
+        <CiLocationOn className="2xl:text-[120px] xl:text-[100px] lg:text-[80px] md:text-[60px] max-md:text-[40px]" />
        </div>
-       <p className='font-thin text-sm text-center'>Each scan updates your asset's location.</p>
-       <p className='font-extralight text-sm'>Know where things last were.</p>
+       <p className='font-thin text-sm  text-center pt-3 xl:text-lg'>Each scan updates your asset's location.</p>
+       <p className='font-extralight text-sm xl:text-lg'>Know where things last were.</p>
         
 </div>
 
@@ -172,13 +171,13 @@ Use our Programmable QR Code Tags and track & mantain your assets</h1>
 <div className=' flex max-sm:flex-col items-center '>
 
 {/* items */}
-<div className="w-64 h-64 flex flex-col items-center shadow-lg bg-slate-100 rounded-xl max-sm:w-fit max-sm:h-fit  mb-4   hover:shadow-2xl hover:shadow-black hover:border-spacing-3 hover:-translate-y-2 hover:duration-300 hover:delay-200">
-       <h1 className='text-lg pt-4 max-sm:text-center max-sm:text-lg mx-1 text-center'>Create and Program Your Assets</h1>
+<div className="xl:w-96 xl:h-96 md:w-64 md:h-64 flex flex-col items-center shadow-lg bg-slate-100 rounded-xl max-sm:w-fit max-sm:h-fit  mb-4   hover:shadow-2xl hover:shadow-black hover:border-spacing-3 hover:-translate-y-2 hover:duration-300 hover:delay-200">
+       <h1 className='text-lg pt-4 max-sm:text-center max-sm:text-lg mx-1 text-center xl:text-2xl md:pt-2 xl:my-4'>Create and Program Your Assets</h1>
        <div className='py-3 text-orange-300 drop-shadow-xl decoration-purple-100'>
-        <MdWebAsset fontSize={60} />
+        <MdWebAsset className="2xl:text-[120px] xl:text-[100px] lg:text-[80px] md:text-[60px] max-md:text-[40px]" />
        </div>
-       <p className='font-thin text-sm  text-center pt-3'>Print your own.Attach them to anything </p>
-      <p className='font-extralight text-sm'>  you want to track.</p>
+       <p className='font-thin text-sm  text-center pt-3 xl:text-lg'>Print your own.Attach them to anything </p>
+      <p className='font-extralight text-sm xl:text-lg'>  you want to track.</p>
 
         
 </div>
@@ -189,13 +188,13 @@ Use our Programmable QR Code Tags and track & mantain your assets</h1>
 <div className=' flex max-sm:flex-col items-center '>
 
 {/* items */}
-<div className="w-64 h-64 flex flex-col items-center shadow-lg bg-slate-100 rounded-xl max-sm:w-fit max-sm:h-fit  mb-4  hover:shadow-2xl hover:shadow-black hover:border-spacing-3 hover:-translate-y-2 hover:duration-300 hover:delay-200">
- <h1 className='text-lg pt-4 max-sm:text-center max-sm:text-lg mx-1 text-center'>Create and Program Your Assets</h1>
+<div className="xl:w-96 xl:h-96 md:w-64 md:h-64 flex flex-col items-center shadow-lg bg-slate-100 rounded-xl max-sm:w-fit max-sm:h-fit  mb-4  hover:shadow-2xl hover:shadow-black hover:border-spacing-3 hover:-translate-y-2 hover:duration-300 hover:delay-200">
+ <h1 className='text-lg pt-4 max-sm:text-center max-sm:text-lg mx-1 text-center xl:text-2xl md:pt-2 xl:my-4'>Create and Program Your Assets</h1>
  <div className='py-3 text-orange-300 drop-shadow-xl decoration-purple-100'>
-        <MdWebAsset fontSize={60} />
+        <MdWebAsset className="2xl:text-[120px] xl:text-[100px] lg:text-[80px] md:text-[60px]  max-md:text-[40px]" />
        </div>
-       <p className='font-thin text-sm  text-center pt-3'>Print your own.Attach them to anything </p>
-      <p className='font-extralight text-sm'>  you want to track.</p>
+       <p className='font-thin text-sm  text-center pt-3 xl:text-lg'>Print your own.Attach them to anything </p>
+      <p className='font-extralight text-sm xl:text-lg'>  you want to track.</p>
 
         
 </div>

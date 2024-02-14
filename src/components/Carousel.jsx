@@ -16,13 +16,23 @@ const Carousel = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     initialSlide: 0,
 
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1580,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    
+      {
+        breakpoint: 1280,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -59,7 +69,7 @@ const Carousel = () => {
           </div>
      
      {/* I have added the container class in the slider component */}
-        <div className="container mx-auto  mb-10 text-center pt-3 mt-4 ">
+        <div className="max-xl:container mx-auto  mb-10 text-center pt-3 mt-4 xl:mx-4 xl:px-4 ">
           <Slider
             {...settings}
             className="flex flex-wrap gap-3 items-center justify-between  w-full p-2 max-md:justify-evenly max-md:gap-2 max-md:scale-90  "
@@ -71,7 +81,7 @@ const Carousel = () => {
                 src={card1}
                 alt="Sunset in the mountains"
               />
-              <div class="px-2 py-4">
+              <div className="px-2 py-4">
                 <div className="font-semi-bold text-xl mb-2 w-fit text-center mx-auto max-md:text-sm ">
                   Quick and Easy Tagging
                 </div>
@@ -86,7 +96,7 @@ const Carousel = () => {
                 src={card2}
                 alt="Sunset in the mountains"
               />
-              <div class="px-2 py-4">
+              <div className="px-2 py-4">
                 <div className="font-semi-bold text-lg mb-2 w-fit mx-auto max-md:text-sm ">
                   QR Code Scanning
                 </div>
@@ -100,7 +110,7 @@ const Carousel = () => {
                 src={card3}
                 alt="Sunset in the mountains"
               />
-              <div class="px-2 py-4">
+              <div className="px-2 py-4">
                 <div className="font-semi-bold text-xl mb-2 w-fit mx-auto max-md:text-sm ">
                   Location Tracking
                 </div>
@@ -113,7 +123,7 @@ const Carousel = () => {
                 src={card4}
                 alt="Sunset in the mountains"
               />
-              <div class="px-2 py-4">
+              <div className="px-2 py-4">
                 <div className="font-semi-bold text-xl mb-2 w-fit mx-auto max-md:text-sm ">
                   Asset Database
                 </div>
@@ -127,7 +137,7 @@ const Carousel = () => {
                 src={card5}
                 alt="Sunset in the mountains"
               />
-              <div class="px-2 py-4">
+              <div className="px-2 py-4">
                 <div className="font-semi-bold text-xl mb-2 w-fit mx-auto max-md:text-sm ">
                   Asset Bookings
                 </div>
@@ -141,7 +151,7 @@ const Carousel = () => {
                 src={card6}
                 alt="Sunset in the mountains"
               />
-              <div class="px-2 py-4">
+              <div className="px-2 py-4">
                 <div className="font-semi-bold text-xl mb-2 w-fit mx-auto max-md:text-sm ">
                   Print your own tags
                 </div>

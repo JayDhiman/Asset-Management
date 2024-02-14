@@ -1,9 +1,8 @@
 import React from 'react';
 import logo from '../assets/logo.png'
-
+import { Link } from "react-router-dom";
 
 const Navbar = ({
-    
     items,
     button
 }) => {
@@ -25,22 +24,44 @@ const Navbar = ({
                         </div>
                         
                     </div>
+
+
                     <ul className="md:flex items-center justify-end text-end space-x-6 hidden">
                         <li className="text-lg flex space-x-3 font-extralight">
                             <div className='text-white'>
-                                {/* Map through items and apply spacing */}
+
+                    {/* Added the Link tag for Particular routes  */}
                                 {items.map((item, index) => (
-                                    <span key={index}  className='hover:shadow-xl px-2'>{item}</span>
+                                    <span key={index}  className='hover:shadow-xl px-2'>
+                                 
+                                   <Link to={`${item.toLowerCase()}`}>
+                                    {item}
+                                   </Link> 
+                                    
+                                    </span>
                                 ))}
+                                   
                             </div>
                         </li>
-                        <li className=" flex space-x-3 font-extralight">
-                            <div className=''>
-                               {button.map((val,index)=>(
-                                <span key={index}  className='mr-2 p-3'>{val}</span>
-                               ))}
+
+                        <li className="text-lg flex space-x-3 gap-1 font-extralight ">
+                            <div className='text-white'>
+
+                    {/* Added the Link tag for Particular Routes */}
+                    
+                                {button.map((btn, index) => (
+                                    <span key={index}  className='hover:shadow-xl p-1 px-2 bg-orange-500 rounded-lg text-[15px] mx-1 hover:bg-orange-600'>
+                                 
+                                   <Link to={`${btn.toLowerCase()}`}>
+                                    {btn}
+                                   </Link> 
+                                    
+                                    </span>
+                                ))}
+                                   
                             </div>
                         </li>
+                      
                     </ul>
                 </div>
             </nav>
