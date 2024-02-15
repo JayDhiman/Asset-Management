@@ -1,31 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Home from './pages/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contact from './pages/Contact';
 import Features from './pages/Features';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-
+import { useDispatch } from 'react-redux'
+import authService from './appwrite/auth';
+import {login,logout} from './Store/Authslice'
 
 
 
 const App = () => {
+const[loading,setLoading] = useState(true);
+const dispatch = useDispatch()
 
-return (
-<BrowserRouter>
-<Routes>
+useEffect(()=>{
+authService.getCurrnetUser()
+.then((userData)=>{
+  if(userData){
+    dispatch(login({userData}))
+  
+  }else{
+    dispatch(logout())
+  }
+})
+.finally(()=>setLoading(false))
+},[])
 
-<Route path='/' element={<Home/>} />
-<Route path='/Features' element={<Features/>} />
-<Route path='/Contact' element={<Contact/>} />
-<Route path='/Login' element={<Login/>} />
-<Route path='/Login' element={<SignUp/>} />
+return !loading ?(
 
+<div>
+  div<Home/></div>
 
-</Routes>
+) : null
 
-</BrowserRouter>
-  )
+  
 }
 
 export default App
