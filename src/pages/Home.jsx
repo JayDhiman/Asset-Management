@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import Navbar from '../components/Navbar'
+// import Navbar from '../components/Navbar'
 import { CiMobile1 } from "react-icons/ci";
 import { CiLocationOn } from "react-icons/ci";
 import { MdWebAsset } from "react-icons/md";
@@ -29,7 +29,7 @@ return (
 
 {/* Navbar */}
 
- <Navbar  items= { ["Features", "Contact"]} button={['Login','SignUp']} />
+ {/* <Navbar  items= { ["Features", "Contact"]} button={['Login','SignUp']} /> */}
   
  {/* Main section */}
  {/* I have added the Framer Motion moton-div for the animation */}

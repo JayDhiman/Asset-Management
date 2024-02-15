@@ -1,5 +1,1 @@
-- I have added the the screen sizes for the diffrent screens
-- I have added the responsive according to the bigger screens aswell.
-- I have chnaged the code of navbar.
-- I have remove the button component which were used as a Props in Navbar into a static data and i map       through the data.
-- I have added some routes related to the Links as well in the navbar and setup base routes in the App      component.
+- I have created a branch for the 
