@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
-import { login } from '../Store/Authslice'
+import { login as storeLogin } from '../Store/Authslice'
 import Button from './Button'
 import Input from './Input'
 import {useDispatch} from "react-redux"
@@ -27,7 +27,7 @@ const loginData = async (data)=>{
         const session = await authService.login(data)
         if (session) {
             const userData = await authService.getCurrentUser()
-            if(userData) dispatch(login(userData));
+            if(userData) dispatch(storeLogin(userData));
             navigate("/")
         }
     } catch (error) {
@@ -56,6 +56,7 @@ return (
                         Sign Up
                     </Link>
         </p>
+        {error && <p className='className="text-red-600 mt-8 text-start'>{error}</p>}
        
         <form onSubmit={handleSubmit(loginData)} className='mt-8'>
             <div className='space-y-5'>

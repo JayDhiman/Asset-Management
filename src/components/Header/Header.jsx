@@ -5,7 +5,9 @@ import logo from '../../assets/logo.png'
 
 
 const Header = () => {
- const authStatus  = useSelector((state) => state.auth.status)
+ const authStatus  = useSelector((state) => {
+  console.log(state);
+  state.Auth.status})
  const navigate = useNavigate();
 
  const navItems = [
